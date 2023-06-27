@@ -29,4 +29,5 @@ Outline the steps required to install and set up your project. Include any depen
 
 ```shell
 $ npm install
+$ npm run start
 
