@@ -1,3 +1,4 @@
+/* eslint-disable */
 require('dotenv').config();
 const mongoose = require('mongoose');
 
@@ -6,5 +7,5 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log('MongoDB connected')) // eslint-disable-line no-console
-  .catch((err) => console.log(err)); // eslint-disable-line no-console
+  .then(() => console.log('MongoDB connected'))
+  .catch((err) => console.log(err));
