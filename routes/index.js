@@ -2,7 +2,16 @@ const express = require('express');
 
 const router = express.Router();
 
-/* GET home page. */
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     summary: Get home page
+ *     description: Returns home page
+ *     responses:
+ *       200:
+ *        description: Home page
+ */
 router.get('/', (req, res) => {
   res.render('index', { title: 'Express' });
 });
