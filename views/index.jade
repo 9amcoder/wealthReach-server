@@ -1,5 +1,23 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  //h1= title
+  h1= 'Fetch data from API:'
+  h4= 'Ethereum Price Index'
+  p Symbol: #{data.symbol}
+  p Buying Price: #{data.buy}
+  p Selling Price: #{data.sell}
+  - let dateEth = new Date(data.time)
+  p Time Stamp: #{dateEth.toDateString()}
+  h4= 'Bitcoin Price Index'
+  p Symbol: #{btcData.symbol}
+  p Buying Price: #{btcData.buy}
+  p Selling Price: #{btcData.sell}
+  - let dateBtc = new Date(btcData.time)
+  p Time Stamp: #{dateBtc.toDateString()}
+  h4= 'Exchange rate'
+  p 1 CAD = #{currencyData.EUR} EUR
+  p 1 CAD = #{currencyData.USD} USD
+  p 1 CAD = #{currencyData.JPY} JPY
+  p 1 CAD = #{currencyData.BGN} BGN
+  p 1 CAD = #{currencyData.CZK} CZK
