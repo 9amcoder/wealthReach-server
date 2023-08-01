@@ -82,7 +82,7 @@ router.patch('/investments/:id', getInvestment, async (req, res) => {
 // Delete an investment
 router.delete('/investments/:id', getInvestment, async (req, res) => {
   try {
-    await res.investment.remove();
+    await Investment.deleteOne({ _id: req.params.id });
     res.json({ message: 'Investment deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });

@@ -19,10 +19,10 @@ router.get('/transactions', async (req, res) => {
 async function getTransaction(req, res, next) {
   try {
     const transaction = await Transaction.findById(req.params.id);
-    if (transaction == null) {
+    if (!transaction) {
       return res.status(404).json({ message: 'Transaction not found' });
     }
-    res.transaction = transaction;
+    req.transaction = transaction;
     next();
   } catch (err) {
     return res.status(500).json({ message: err.message });
@@ -87,7 +87,7 @@ router.patch('/transactions/:id', getTransaction, async (req, res) => {
 // Delete a transaction
 router.delete('/transactions/:id', getTransaction, async (req, res) => {
   try {
-    await res.transaction.remove();
+    await Transaction.deleteOne({ _id: req.params.id });
     res.json({ message: 'Transaction deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });

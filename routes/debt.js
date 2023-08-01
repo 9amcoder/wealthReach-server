@@ -87,7 +87,7 @@ router.patch('/debts/:id', getDebt, async (req, res) => {
 // Delete a debt
 router.delete('/debts/:id', getDebt, async (req, res) => {
   try {
-    await res.debt.remove();
+    await Debt.deleteOne({ _id: req.params.id });
     res.json({ message: 'Debt deleted' });
   } catch (err) {
     res.status(500).json({ message: err.message });
