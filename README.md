@@ -54,8 +54,11 @@ or you can start with `nodemon `
 ```
 
 ## Screenshots
+- Rest API testing
 
+<img width="1187" alt="Screenshot 2023-07-31 at 10 22 31 PM" src="https://github.com/9amcoder/wealthReach-server/assets/59545545/0bcf3997-82e5-4686-b3ef-504212651b45">
 
+<img width="1187" alt="Screenshot 2023-07-31 at 10 22 46 PM" src="https://github.com/9amcoder/wealthReach-server/assets/59545545/a4166621-c422-4382-ae74-4bc71a2f42fc">
 
 
 #### Decleration:
